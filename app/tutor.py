@@ -7,7 +7,7 @@ Ties together retrieval + context pruning + LLM answering.
 Usage:
     python app/tutor.py
 """
-
+import os
 import sys
 from retriever import retrieve, build_prompt
 from groq import Groq
