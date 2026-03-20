@@ -12,8 +12,7 @@ from groq import Groq
 app = Flask(__name__)
 app.secret_key = "edututor-secret-key-2024"
 
-GROQ_API_KEY = "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"
-
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY", "")
 def get_answer(query):
     client = Groq(api_key=GROQ_API_KEY)
     result = retrieve(query)

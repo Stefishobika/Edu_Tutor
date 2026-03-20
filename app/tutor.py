@@ -14,7 +14,7 @@ from groq import Groq
 
 
 def get_llm():
-    client = Groq(api_key="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")
+    client = Groq(api_key=os.environ.get("GROQ_API_KEY", ""))
     def groq_answer(prompt: str) -> str:
         response = client.chat.completions.create(
             model="llama-3.3-70b-versatile",
